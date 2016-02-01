@@ -1,0 +1,62 @@
+
+<div class="container">
+    <div class="row">
+        <h1>VerbalExpressions Tester</h1>
+        <h3>Build and test regular expresions with <a target="_blank" href="https://github.com/VerbalExpressions/JSVerbalExpressions/">VerbalExpressions library</a></h3>
+        <form>
+            <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="text-exp">Enter your VX expresion <a target="_blank" href="https://github.com/VerbalExpressions/JSVerbalExpressions/wiki#api">(Full API)</a>:</label>
+                    <p>You can use the following: 
+                        <code>.anything()</code>,
+                        <code>.anythingBut( value )</code>,
+                        <code>.endOfLine()</code>,
+                        <code>.find( value )</code>,
+                        <code>.maybe( value )</code>,
+                        <code>.then( value )</code>,
+                        <code>.br()</code>,
+                        <code>.lineBreak()</code>,
+                        <code>.range( from, to)</code>,
+                        <code>.tab()</code>,
+                        <code>.word()</code>,
+                        <code>.withAnyCase()</code>,
+                        <code>.stopAtFirst()</code>,
+                        <code>.searchOneLine()</code>,
+                        <code>.replace( source, value )</code>,
+                        <code>.add( expression )</code>,
+                        <code>.multiple( value )</code>,
+                        <code>.or()</code>
+                    </p>
+                    <textarea class="form-control" rows="8" type="textarea" ng-model="vm.test" name="text-exp"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exp">Enter the expresion you want to test</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control"  ng-model="vm.exp" name="exp" />
+                         <span class="input-group-btn">
+                            <input type="button" class="btn btn-info pull-right"  ng-click="vm.testExp()" name="btn" value="Test"/>
+                         </span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-12" ng-show="vm.res">
+                <div class="form-group ">
+                     <label for="res">{{vm.res}}</label>
+                </div>
+            </div>
+            <div class="col-md-12" ng-show="vm.regex">
+                <div class="form-group">
+                     <label for="regex"> Output regex</label><br>
+                     <pre>{{vm.regex._source}}</pre>
+                </div>
+            </div>
+        </form>
+    </div>
+   
+   
+   
+   
+</div>
